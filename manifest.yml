@@ -1,0 +1,9 @@
+---
+applications:
+  - name: config-test-rob
+    memory: 1G
+    path: target/rob-config-test-0.0.1-SNAPSHOT.jar
+    health-check-type: http
+    health-check-http-endpoint: /actuator/health
+    services:
+      - config-server-rob
